@@ -4,7 +4,7 @@ layout: homepage
 
 ## About Me
 
-I am a Ph.D. student at University of Tennessee, Knoxville, under the supervision of Prof. [Tingliang Huang](https://web.eecs.utk.edu/~thuang/). 
+I am a Ph.D. student at University of Tennessee, Knoxville, under the supervision of Prof. [Tingliang Huang](https://sites.google.com/view/tinglianghuang). 
 
 ## Research Interests
 
