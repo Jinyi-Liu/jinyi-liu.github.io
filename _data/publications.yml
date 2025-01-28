@@ -4,7 +4,7 @@ main:
     authors: Jinyi Liu, Tingliang Huang
     # conference_short: MICCAI
     conference: Marketing Science.
-    pdf: https://pubsonline.informs.org/doi/abs/10.1287/mksc.2022.0410
+    # pdf: https://pubsonline.informs.org/doi/abs/10.1287/mksc.2022.0410
     # code: https://github.com/MrGiovanni/ContinualLearning
     # bibtex: https://bib.yliu.me/MICCAI23.txt
     # image: ./assets/img/teaser_example_2.png
