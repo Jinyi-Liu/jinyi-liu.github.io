@@ -8,8 +8,7 @@ I am a Ph.D. student at University of Tennessee, Knoxville, under the supervisio
 
 ## Research Interests
 
-- **Operation Management-Marketing Interface** 
-<!-- - **Machine Learning:** meta-learning, incremental learning, transfer learning -->
+- **Operation Management-Marketing Interface**: Customization, Personalization, and Pricing
 
 ## News
 
