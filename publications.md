@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Publications
-permalink: /publications/
+title: Research
+permalink: /research/
 ---
 
 {% include_relative _includes/publications.md %}

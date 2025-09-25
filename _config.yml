@@ -1,40 +1,41 @@
 # Basic Information 
-title: Yaoyao Liu
-position: Assistant Professor
-affiliation: University of Illinois
-affiliation_link: https://www.illinois.edu/
-affiliation_logo: ./assets/img/illinois.svg
-email: lyy (at) illinois.edu
+title: Jinyi Liu
+position: Ph.D. candidate in Business Analytics
+affiliation: University of Tennessee, Knoxville
+affiliation_link: https://haslam.utk.edu/
+affiliation_logo: /assets/img/University - HorizLeftLogo-OnOrange (RGB).svg
+email: Jinyi.Liu (at) utk.edu
 
 # Search Engine Optimization (SEO)
-keywords: yaoyao liu, liu yaoyao, yaoyaoliu, liuyaoyao
-canonical: https://yaoyaoliu.web.illinois.edu
-description: Yaoyao Liu is an assistant professor at the University of Illinois Urbana-Champaign. His research lies in meta-learning, incremental learning, and image generation.
-
+keywords: Jinyi Liu, Liu Jinyi
+canonical: https://jinyi-liu.github.io/
+description: Jinyi Liu is a Ph.D. candidate in Business Analytics at Haslam College of Business, University of Tennessee, Knoxville, under the supervision of Prof. Tingliang Huang.
 # The option is used to enable the Illinois template.
-enable_hopkins_logo: true
+enable_hopkins_logo: false
 
 # The option is used to show the last update time.
 enable_last_update: false
 
 # Links
 link_type: icon #text/icon
-google_scholar: https://scholar.google.com/citations?user=Qi2PSmEAAAAJ
-github_link: https://github.com/yaoyao-liu/
-linkedin: https://www.linkedin.com/in/liuyaoyao/
-twitter: https://twitter.com/YaoyaoLiu1/
+google_scholar: https://scholar.google.com/citations?user=MyXvwGgAAAAJ
+github_link: https://github.com/Jinyi-Liu/
+linkedin: https://www.linkedin.com/in/jinyi-liu-3372741a6/
+
 
 # Images 
-avatar: https://img.yliu.me/avatar_new.jpg
+avatar: /assets/img/profile.png
+favicon: /assets/img/favicon.ico
+favicon_dark: /assets/img/favicon.ico
 
 # Footnotes
-footnote: Feel free to use my website's source code.
-footnote_link: https://github.com/yaoyao-liu/minimal-light
+# footnote: Credits to Yaoyao Liu
+# footnote_link: https://github.com/yaoyao-liu/minimal-light
 
 # Analytics
 # Please remove the following lines about analytics services if you fork my project. 
 # Otherwise, the analytics information of your website will be recorded to my ClustrMaps accounts.
-clustrmaps_id: HV0rAUdAxpfEQLOsVs0FcJTR2rKVI5sEQUZIDM-N_HY
+# clustrmaps_id: HV0rAUdAxpfEQLOsVs0FcJTR2rKVI5sEQUZIDM-N_HY
 
 # The following files will be removed from the generated website.
 exclude:
