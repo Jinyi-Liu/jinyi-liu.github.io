@@ -1,6 +1,6 @@
 <h1 id="research"></h1>
 
-<h2 style="margin: 60px 0px -15px;">Publications <temp style="font-size:15px;">
+<h2 style="margin: 60px 0px -15px;">Publication<temp style="font-size:15px;">
 
 
 <div class="publications">
