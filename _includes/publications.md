@@ -97,8 +97,7 @@
 {% endif %}
 
 
-</ol>
-</div>
+
 
 
 {% if site.data.publications.wip %}
