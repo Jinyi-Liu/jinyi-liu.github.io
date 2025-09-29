@@ -2,19 +2,14 @@
 layout: homepage
 ---
 
-## About Me
+<h1 id="about-me"></h1>
 
-I am a Ph.D. student at University of Tennessee, Knoxville, under the supervision of Prof. [Tingliang Huang](https://sites.google.com/view/tinglianghuang). 
+<h2 style="margin: 80px 0px 10px;"></h2>
 
-## Research Interests
+I am a fourth-year Ph.D. candidate in Business Analytics at the [Haslam College of Business](https://haslam.utk.edu/), University of Tennessee, Knoxville, under the supervision of Prof. [Tingliang Huang](https://sites.google.com/view/tinglianghuang). Before joining UTK, I received a master's degree in Economics from the University of Rochester and a bachelor's degree from the Unversity of Science and Technology of China.
 
-- **Operation Management-Marketing Interface**: Customization, Personalization, and Pricing
-
-## News
-
-- **[Sep. 2025]** I will attend the INFORMS 2025 conference.
+My research interests include OM-Marketing Interface, Business Analytics, Platform Operations, Sustainable Supply Chain Management, Pricing & Revenue Management. I am also interested in using machine learning and data science to solve real-world problems.
 
 
-{% include_relative _includes/publications.md %}
+{% include_relative _includes/news.md %}
 
-{% include_relative _includes/services.md %}
