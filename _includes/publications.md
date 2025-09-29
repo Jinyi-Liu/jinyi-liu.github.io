@@ -54,7 +54,7 @@
 
 
 {% if site.data.publications.wp %}
-<h2 style="margin: 40px 0px -15px;">Work in progress</h2>
+<h2 style="margin: 40px 0px -15px;">Working papers</h2>
 <div class="publications">
 <ol class="bibliography">
 {% for link in site.data.publications.wp %}
