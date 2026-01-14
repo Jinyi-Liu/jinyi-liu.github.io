@@ -1,49 +1,57 @@
 # Basic Information 
 title: Jinyi Liu
-position: Ph.D. candidate in Business Analytics
+position: Ph.D. Student in Business Analytics
 affiliation: University of Tennessee, Knoxville
-affiliation_link: https://haslam.utk.edu/
-affiliation_logo: /assets/img/University - HorizLeftLogo-OnOrange (RGB).svg
-email: Jinyi.Liu (at) utk.edu
+email: jinyi.liu@utk.edu
 
 # Search Engine Optimization (SEO)
-keywords: Jinyi Liu, Liu Jinyi
+# The following information is used to improve the website traffic from search engines, e.g., Google.
+keywords: Jinyi Liu, Business Analytics, University of Tennessee, Knoxville, Ph.D. Student
+description: Jinyi Liu is a Ph.D. student in Business Analytics at the University of Tennessee, Knoxville. 
 canonical: https://jinyi-liu.github.io/
-description: Jinyi Liu is a Ph.D. candidate in Business Analytics at Haslam College of Business, University of Tennessee, Knoxville, under the supervision of Prof. Tingliang Huang.
-# The option is used to enable the Illinois template.
-enable_hopkins_logo: false
 
-# The option is used to show the last update time.
-enable_last_update: false
-
-# Links
-link_type: icon #text/icon
-google_scholar: https://scholar.google.com/citations?user=MyXvwGgAAAAJ
+# Links 
+# If you don't need one of them, you may delete the corresponding line.
+google_scholar: https://scholar.google.com/citations?user=MyXvwGgAAAAJ&hl=en
+cv_link: assets/files/curriculum_vitae.pdf
 github_link: https://github.com/Jinyi-Liu/
 linkedin: https://www.linkedin.com/in/jinyi-liu-3372741a6/
-orcid: https://orcid.org/0009-0009-8600-9965
-# cv_link: /assets/CV_Jinyi_New.pdf
+# twitter: https://twitter.com/
 
+# Images (e.g., your profile picture and your website's favicon) 
+# "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
+avatar: ./assets/img/profile.png
+favicon: ./assets/img/favicon.png
+favicon_dark: ./assets/img/favicon-dark.png
 
-# Images 
-avatar: /assets/img/profile.png
-favicon: /assets/img/favicon.ico
-favicon_dark: /assets/img/favicon.ico
+# Footnote
+# You may use the option to disable the footnote, "Powered by Jekyll and Minimal Light theme."
+enable_footnote: true
 
-# Footnotes
-# footnote: Credits to Yaoyao Liu
-# footnote_link: https://github.com/yaoyao-liu/minimal-light
+# Auto Dark Mode
+# You may use the option to disable the automatic dark theme
+auto_dark_mode: true
 
-# Analytics
-# Please remove the following lines about analytics services if you fork my project. 
-# Otherwise, the analytics information of your website will be recorded to my ClustrMaps accounts.
-# clustrmaps_id: HV0rAUdAxpfEQLOsVs0FcJTR2rKVI5sEQUZIDM-N_HY
+# Font
+# You can use this option to choose between Serif or Sans Serif fonts.
+font: "Serif" # or "Sans Serif"
+
+# Google Analytics ID
+# Please remove this if you don't use Google Analytics
+# google_analytics: UA-111540567-4
+
+# Use this project as a remote theme for GitHub Pages
+# See the guide here: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
+remote_theme: yaoyao-liu/minimal-light
 
 # The following files will be removed from the generated website.
 exclude:
-  - build.sh
   - Gemfile
   - Gemfile.lock
   - README.md
+  - README_zh_Hans.md
+  - README_zh_Hant.md
+  - README_de.md
   - LICENSE
-  - CNAME
+  - minimal-light.gemspec
+  - html_source_file/

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 main:
 
   # - title: "ImageNet3D: Towards General-Purpose Object-Level 3D Understanding"
@@ -30,3 +31,27 @@ main:
 wip:
   - title: Waste-Consciousness and Strategic Production under Demand Uncertainty
     authors: with Onesun Steve Yoo and Tingliang Huang
+=======
+main:
+
+  - title: Erratum on "Competing for Recommendations" Model by Zhou and Zou (2023)
+    authors: Jinyi Liu, Tingliang Huang
+    # conference_short: MICCAI
+    conference: Marketing Science.
+    pdf: https://pubsonline.informs.org/doi/abs/10.1287/mksc.2022.0410
+    # code: https://github.com/MrGiovanni/ContinualLearning
+    # bibtex: https://bib.yliu.me/MICCAI23.txt
+    # image: ./assets/img/teaser_example_2.png
+    # notes: Early Accept
+
+  # - title: "Mnemonics Training: Multi-Class Incremental Learning without Forgetting"
+  #   authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
+  #   conference_short: CVPR
+  #   conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
+  #   pdf: https://arxiv.org/pdf/2002.10211.pdf
+  #   code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
+  #   page: https://class-il.mpi-inf.mpg.de/mnemonics/
+  #   bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
+  #   notes: Oral Presentation
+  #   image: ./assets/img/teaser_example.png
+>>>>>>> f493fa1 (No)
