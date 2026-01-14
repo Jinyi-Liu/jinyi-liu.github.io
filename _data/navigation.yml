@@ -16,8 +16,8 @@ main:
   - title: "Research"
     url: research/
 
-  - title: "Notes"
-    url: notes/
+  # - title: "Notes"
+  #   url: notes/
 
   - title: "Home"
     url: ./
