@@ -18,6 +18,27 @@ Base URL:
 
 <hr>
 
+<h3>Browse notes</h3>
+
+<p style="margin-bottom: 8px;">
+This page loads the file list directly from GitHub, so you can click a note to view it.
+</p>
+
+<div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom: 10px;">
+  <input id="filter"
+         type="text"
+         placeholder="Filter notes (type to search)…"
+         style="flex: 1 1 320px; max-width: 520px; padding: 8px; border: 1px solid #ccc; border-radius: 0;" />
+  <span id="status" style="font-size: 0.95em;"></span>
+</div>
+
+<div id="notesList"
+     style="border: 1px solid #eee; padding: 10px; max-height: 38vh; overflow: auto;">
+  Loading…
+</div>
+
+<hr>
+
 <h3>Open a note</h3>
 
 <p style="margin-bottom: 8px;">
@@ -64,6 +85,13 @@ If you’re not sure about the filename, browse the folder here:
     var btn = document.getElementById("loadBtn");
     var iframe = document.getElementById("viewer");
     var open = document.getElementById("openNewTab");
+    var listEl = document.getElementById("notesList");
+    var statusEl = document.getElementById("status");
+    var filterEl = document.getElementById("filter");
+
+    function setStatus(msg) {
+      if (statusEl) statusEl.textContent = msg || "";
+    }
 
     function normalizeFilename(v) {
       v = (v || "").trim();
@@ -93,5 +121,103 @@ If you’re not sure about the filename, browse the folder here:
       input.value = file;
       loadFromInput();
     }
+
+    function escapeHtml(s) {
+      return String(s)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function renderList(items) {
+      if (!listEl) return;
+      if (!items.length) {
+        listEl.innerHTML = "<em>No notes found.</em>";
+        return;
+      }
+
+      listEl.innerHTML = items.map(function (it) {
+        // show relative path under html/
+        var display = it.path.replace(/^html\//, "");
+        return (
+          '<div style="margin: 4px 0;">' +
+          '<a href="#" data-src="' + escapeHtml(it.url) + '" data-file="' + escapeHtml(display) + '">' +
+          escapeHtml(display) +
+          "</a>" +
+          "</div>"
+        );
+      }).join("");
+
+      listEl.querySelectorAll("a[data-src]").forEach(function (a) {
+        a.addEventListener("click", function (e) {
+          e.preventDefault();
+          var src = a.getAttribute("data-src");
+          var f = a.getAttribute("data-file");
+          input.value = f;
+          iframe.src = src;
+          open.href = src;
+        });
+      });
+    }
+
+    function applyFilter(allItems) {
+      var q = (filterEl && filterEl.value ? filterEl.value : "").trim().toLowerCase();
+      if (!q) return allItems;
+      return allItems.filter(function (it) {
+        return it.path.toLowerCase().indexOf(q) !== -1;
+      });
+    }
+
+    // Load list of html files from GitHub using the Trees API (recursive)
+    // This avoids needing a hardcoded manifest and supports subfolders.
+    var allItems = [];
+    function loadIndex() {
+      setStatus("Loading list…");
+      if (listEl) listEl.textContent = "Loading…";
+
+      fetch("https://api.github.com/repos/Jinyi-Liu/paper_reading_note/git/trees/main?recursive=1", {
+        headers: { "Accept": "application/vnd.github+json" }
+      })
+      .then(function (r) {
+        if (!r.ok) throw new Error("GitHub API error: " + r.status);
+        return r.json();
+      })
+      .then(function (data) {
+        var tree = (data && data.tree) ? data.tree : [];
+        allItems = tree
+          .filter(function (n) { return n && n.type === "blob" && typeof n.path === "string"; })
+          .filter(function (n) { return n.path.startsWith("html/") && n.path.toLowerCase().endsWith(".html"); })
+          .map(function (n) {
+            return {
+              path: n.path,
+              url: "https://cdn.jsdelivr.net/gh/Jinyi-Liu/paper_reading_note@main/" + encodeURI(n.path)
+            };
+          })
+          .sort(function (a, b) { return a.path.localeCompare(b.path); });
+
+        setStatus(allItems.length ? ("Found " + allItems.length + " notes") : "No notes found");
+        renderList(applyFilter(allItems));
+      })
+      .catch(function (err) {
+        setStatus("Failed to load list");
+        if (listEl) {
+          listEl.innerHTML =
+            "<p><strong>Could not load notes list.</strong></p>" +
+            "<p>This is usually caused by GitHub API rate limits or network blocking.</p>" +
+            '<p>You can still browse the folder here: <a href="https://github.com/Jinyi-Liu/paper_reading_note/tree/main/html">paper_reading_note/html</a></p>' +
+            "<p>Error: <code>" + escapeHtml(err && err.message ? err.message : String(err)) + "</code></p>";
+        }
+      });
+    }
+
+    if (filterEl) {
+      filterEl.addEventListener("input", function () {
+        renderList(applyFilter(allItems));
+      });
+    }
+
+    loadIndex();
   })();
 </script>
