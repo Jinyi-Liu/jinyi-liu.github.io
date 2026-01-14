@@ -81,6 +81,7 @@ If you’re not sure about the filename, browse the folder here:
 <script>
   (function () {
     var base = "https://cdn.jsdelivr.net/gh/Jinyi-Liu/paper_reading_note@main/html/";
+    var viewBase = "{{ '/notes/view/' | relative_url }}";
     var input = document.getElementById("noteFile");
     var btn = document.getElementById("loadBtn");
     var iframe = document.getElementById("viewer");
@@ -141,25 +142,14 @@ If you’re not sure about the filename, browse the folder here:
       listEl.innerHTML = items.map(function (it) {
         // show relative path under html/
         var display = it.path.replace(/^html\//, "");
+        var viewHref = viewBase + "?file=" + encodeURIComponent(display);
         return (
-          '<div style="margin: 4px 0;">' +
-          '<a href="#" data-src="' + escapeHtml(it.url) + '" data-file="' + escapeHtml(display) + '">' +
-          escapeHtml(display) +
-          "</a>" +
+          '<div style="margin: 4px 0; display:flex; gap:10px; align-items:center; flex-wrap:wrap;">' +
+            '<a href="' + escapeHtml(viewHref) + '">' + escapeHtml(display) + "</a>" +
+            '<a href="' + escapeHtml(it.url) + '" target="_blank" rel="noopener" style="font-size:0.9em; text-decoration:none; border:1px solid #333; padding:2px 6px;">Open</a>' +
           "</div>"
         );
       }).join("");
-
-      listEl.querySelectorAll("a[data-src]").forEach(function (a) {
-        a.addEventListener("click", function (e) {
-          e.preventDefault();
-          var src = a.getAttribute("data-src");
-          var f = a.getAttribute("data-file");
-          input.value = f;
-          iframe.src = src;
-          open.href = src;
-        });
-      });
     }
 
     function applyFilter(allItems) {
