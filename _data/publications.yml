@@ -18,14 +18,15 @@ main:
     pdf: https://pubsonline.informs.org/doi/10.1287/mksc.2022.0410
 
 
-# wp:
-#   - title: Commentary on "On Customized Goods, Standard Goods, and Competition."
-#     authors: Jinyi Liu, Ganquan Huang, Tingliang Huang
-#     conference: Major Revision at Marketing Science
+wp:
+  - title: Commentary on "On Customized Goods, Standard Goods, and Competition."
+    authors: Jinyi Liu, Ganquan Huang, Tingliang Huang
+    conference: Minor Revision at Marketing Science
 
-#   - title: "Product Customization and Price Personalization: A Competitive Analysis."
-#     authors: Jinyi Liu, Ganquan Huang, Tingliang Huang
-#     conference: Major Revision at Management Science
+  - title: A project on product customization and price personalization
+  # "Product Customization and Price Personalization: A Competitive Analysis."
+    authors: Jinyi Liu, Ganquan Huang, Tingliang Huang
+    conference: Major Revision at Management Science
 
 wip:
   - title: "When Waste Penalties Raise Profits: Disciplining Inventory Races under Competition"
